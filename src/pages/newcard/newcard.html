@@ -1,0 +1,112 @@
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+<!-- <ion-header class="background">
+ -->
+  
+<!-- </ion-header >-->
+
+
+<ion-content padding class="background">
+	<ion-grid style="background-color: #f6f6f6">
+    	<ion-row>
+    		<ion-col style="font-size: 2.3em; vertical-align: middle; margin-left: .3em">
+    			 <ion-icon name="close" (click)="goBackNoSave()"></ion-icon>
+			</ion-col>
+			<ion-col style="text-align: center; font-size: 1.2em; line-height: 2em">
+				New Card
+			</ion-col>
+			<ion-col>
+				<ion-icon name="checkmark" style="float: right; margin-right: .3em; font-size: 2.3em; vertical-align: middle" (click)="goBackSave()"></ion-icon>
+			</ion-col>
+  		</ion-row>
+  	</ion-grid>
+	<ion-card style="background-color: #f6f6f6;">
+		<ion-grid style="padding: 0px">
+			<ion-row style="height: 8em; border-bottom: 1px solid white">
+			    <ion-col style="text-align: end; color: #fff; border-right: 1px solid #fff">
+			     	<ion-icon name="create"></ion-icon>
+			    </ion-col>
+			    <ion-col offset-3>
+			    	<ion-row>
+			    		<ion-col style="text-align: end; color: #fff;">
+			    			<ion-icon name="create"></ion-icon>
+			    		</ion-col>
+			    	</ion-row>
+			    	<ion-row>
+			    		<ion-col style="text-align: center; color: #fff; line-height: 1.5em; font-size: 2em">
+			    		LOGO
+			    		</ion-col>
+			    	</ion-row>
+			    </ion-col>
+			  </ion-row>
+			  <ion-row style="background-color: #add8e6" (click)="openModalCompany()">
+			    <ion-col col-md-3>
+			     	<ion-row style="font-size: 2em">
+			     		{{ firstname }} {{ lastname }}
+			     	</ion-row>
+			     	<ion-row>
+			     		<strong>{{ title }}</strong>
+			     	</ion-row>
+			     	<ion-row>
+			     		{{ company }}
+			     	</ion-row>
+			    </ion-col>
+			    <ion-col col-md-3>
+			    	
+			    </ion-col>
+			    <ion-col col-md-1 style="font-size: 2em; text-align: center; line-height: 2.5em">
+			    	<ion-row>
+			    		<ion-col>
+			    			<ion-icon name="share"></ion-icon>
+			    		</ion-col>
+			    		<ion-col>
+			    			<ion-icon name="more"></ion-icon>
+			    		</ion-col>
+			    	</ion-row>
+			    </ion-col>
+			  </ion-row>
+		</ion-grid>
+	</ion-card>
+	<ion-card style="padding: .2em">
+		<ion-grid (click)="openModalPhone()">
+			  <ion-row>
+			    <ion-col col-md-3>
+			     <ion-icon name="call"></ion-icon>
+			    </ion-col>
+			    <ion-col col-md-3>
+			    	<span>{{ phone }}</span>
+			    </ion-col>
+			    <ion-col col-md-3 style="text-align: center">
+			    	  <ion-icon name="chatboxes"></ion-icon>
+			    </ion-col>
+			  </ion-row>
+			</ion-grid>
+	</ion-card>
+	<ion-card style="padding: .2em">
+		<ion-grid (click)="openModal()">
+			<ion-row>
+			    <ion-col col-md-3>
+			    	 <ion-icon name="mail"></ion-icon>
+			    </ion-col>
+			    <ion-col col-md-3>
+			     	<span>{{ email }}</span>
+			    </ion-col>
+			    <ion-col col-md-3>
+			    </ion-col>
+			</ion-row>
+		</ion-grid>
+	</ion-card>
+	<div style="border-style: dashed; padding: .2em; border-color: lightgray; border-radius: 5%; width: 95%; margin: 0 auto">
+		<ion-grid>
+			<ion-row>
+				<ion-col style="text-align: center; color: lightgray; font-size: 2em">	
+					<ion-icon name="add-circle"></ion-icon>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</div>
+	
+	<!-- <ion-content padding>
+	 <button ion-button color="secondary" (click)="accessGallery()">Open Gallery</button>
+	 <img [src]="base64Image" *ngIf="base64Image" />
+	</ion-content> -->
+</ion-content>

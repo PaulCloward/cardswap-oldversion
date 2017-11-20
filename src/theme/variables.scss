@@ -23,7 +23,7 @@ $app-direction: ltr;
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
 
 
-
+$toolbar-background: #fff;
 
 // Named Color Variables
 // --------------------------------------------------
@@ -86,3 +86,7 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+$modal-inset-height-large: 50%;
+$modal-inset-height-small: 50%;
+$modal-inset-width: 50%;

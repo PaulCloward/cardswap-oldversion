@@ -1,0 +1,41 @@
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+<ion-header class="background">
+  <ion-navbar>
+    <span style="font-size: 1em; color: gray;margin-left: 15%">CREATE YOUR ACCOUNT</span>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="background">
+		
+		<!-- <ion-input [(ngModel)]="firstname" class="input-label" type="text" placeholder="First Name"></ion-input>
+
+		<ion-input [(ngModel)]="lastname" class="input-label" type="text" placeholder="Last Name"></ion-input>
+
+		
+		<ion-input [(ngModel)]="email"  class="input-label" type="text" placeholder="Email"></ion-input>
+
+		
+		<ion-input [(ngModel)]="password" class="input-label" type="text" placeholder="Password"></ion-input>
+	
+		
+		<br>
+		<p style="font-size: .7em; color:gray; text-align: center;">By continuing, I agree to CardSwap's <strong>Terms</strong> and <strong>Privacy Policy</strong></p>
+		<br>
+		<button class="create-account-button" (click)="signUp()">
+			Create Account
+		</button>
+		<br><br> -->
+		<ion-item>
+			<ion-label floating>Email Address</ion-label>
+			<ion-input type="text" [(ngModel)]="user.email"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>Password</ion-label>
+			<ion-input type="text" [(ngModel)]="user.password"></ion-input>
+		</ion-item>
+		<br>
+		<p style="font-size: .7em; color:gray; text-align: center;">By continuing, I agree to CardSwap's <strong>Terms</strong> and <strong>Privacy Policy</strong></p>
+
+	<button ion-button class="create-account-button" (click)="register(user)">CREATE ACCOUNT</button>
+	
+</ion-content>

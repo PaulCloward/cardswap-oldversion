@@ -1,0 +1,22 @@
+<ion-content padding>
+	<ion-grid style="background-color: #fff">
+    	<ion-row>
+    		<ion-col>
+    			 <ion-icon name="checkmark" style="float: left; margin-left: .3em; font-size: 2.3em; vertical-align: middle" (click)="goBackSave()"></ion-icon>
+			</ion-col>
+			<ion-col>
+
+			</ion-col>
+			<ion-col>
+				<ion-icon name="close" (click)="goBackNoSave()" style="font-size: 2.3em; vertical-align: middle; float: right"></ion-icon>
+			</ion-col>
+  		</ion-row>
+  		<ion-row>
+			<ion-col></ion-col>
+			<ion-col> <ion-icon style="display: block; margin: 0 auto; font-size: 3em; text-align: center" name="mail"></ion-icon></ion-col>
+			<ion-col></ion-col>
+		</ion-row>
+	</ion-grid>
+
+	<input type="Text" id="emailInput" style="text-align: center; border: none; border-bottom: 1px solid lightgray; margin-top:  .5em; font-size: 1.5em; width: 100%" #emai value="{{email}}" />
+</ion-content>

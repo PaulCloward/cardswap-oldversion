@@ -1,0 +1,96 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Build Card</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+<ion-content padding class="background">
+	<div class="header">
+		CARD SWAP
+		<ion-icon style="float: right; font-size: 2em" name="menu"></ion-icon>
+	</div>
+	<ion-grid style="margin-top: 2.5em">
+		<ion-row>
+			<ion-col style="text-align: center">
+				<span id="txtMyCards" class="subheader" (click)="onLoadMyCards()" style="color: gray; border-bottom: .2em solid gray">My Cards</span>
+			</ion-col>
+			<ion-col style="text-align: center">
+				<span id="txtGroups" class="subheader" (click)="onLoadGroups()">Groups</span>
+			</ion-col>
+			<ion-col style="text-align: center">
+				<span id="txtReceived" class="subheader" (click)="onLoadReceived()">Received</span>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+
+	<div style="border: 1px solid gray; border-style: dashed; height: 12em; width: 100%; margin-top: 3em; text-align: center; border-radius: 5%">
+ 		<div style="line-height: 4.3em; font-size: 3em; color: lightgray" (click)="onLoadNewCardPage()">
+ 			<ion-icon name="add-circle"></ion-icon>
+ 		</div>
+	</div>
+
+	<br><br><br><br>
+	
+	<div *ngFor="let card of cards">
+	<ion-card style="background-color: #f6f6f6;" *ngIf="showMyCards">
+		<ion-grid style="padding: 0px">
+			<ion-row style="border-bottom: 1px solid white">
+			    <ion-col style="border-right: 1px solid #fff; padding: 0em">
+			     	<img style="width: 100%" src="assets/img/portfolio.jpg" />
+			    </ion-col>
+			    <ion-col col-8>
+			    		<img style="width: 50%" src="assets/img/logo.jpg" />
+			    </ion-col>
+			  </ion-row>
+			  <ion-row style="background-color: #add8e6">
+			    <ion-col col-md-3>
+			     	<ion-row style="font-size: 2em">
+			     		{{ card.firstname }} {{ card.lastname }}
+			     	</ion-row>
+			     	<ion-row>
+			     		<strong>{{ card.title }}</strong>
+			     	</ion-row>
+			     	<ion-row>
+			     		{{ card.company }}
+			     	</ion-row>
+			    </ion-col>
+			    <ion-col col-md-3>
+			    	
+			    </ion-col>
+			    <ion-col col-md-1 style="font-size: 2em; text-align: center; line-height: 2.5em">
+			    	<ion-row>
+			    		<ion-col>
+			    			<ion-icon name="share" (click)="loadSendPage()"></ion-icon>
+			    		</ion-col>
+			    		<ion-col>
+			    			<ion-icon name="more"></ion-icon>
+			    		</ion-col>
+			    	</ion-row>
+			    </ion-col>
+			  </ion-row>
+		</ion-grid>
+	</ion-card>
+	<br><br><br>
+	</div>
+
+	<!-- <ion-card>
+		<ion-item>
+			<ion-input class="component-center" type="text" name="name" value="{{name}}"></ion-input>
+		</ion-item> 
+
+		<ion-item>
+			<ion-input  class="component-center" type="text" name="email" value="{{email}}"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-input  class="component-center" type="text" name="phone" value="{{phone}}"></ion-input>
+		</ion-item>
+	</ion-card> -->
+
+	<!-- <ion-buttons>
+		<button class="component-center" ion-button large (click)="onLoadSendCardPage()">Send</button>
+	</ion-buttons> -->
+</ion-content>
